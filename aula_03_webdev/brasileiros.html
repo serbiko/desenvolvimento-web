@@ -3,21 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brasileiros</title>
+    <title>Elenco</title>
+    <link rel="stylesheet" href="second.css">
+    <style>
+        .importante {
+            font-size: 50px;
+            text-align: center;
+        }
+        .anos {
+            text-align: center;
+            color: black;
+            font-size: 40px;
+        }
+        p {
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Brasileiros:</h1>
-    <span>
-        <ul>
-            <li>1980</li>
-            <li>1982</li>
-            <li>1983</li>
-            <li>1987</li>
-            <li>1990</li>
-            <li>2009</li>
-            <li>2019</li>
-            <li>2020</li>
-        </ul>
-    </span>
+    <ul class="estilo">
+        <li><a href="teste.html">Início</a></li>
+        <li><a href="historia.html">História</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Títulos</a>
+          <div class="dropdown-content">
+            <a href="mundial.html">Mundial</a>
+            <a href="libertadores.html">Libertadores</a>
+            <a href="brasileiros.html">Brasileiros</a>
+            <a href="copa_do_brasil.html">Copa do Brasil</a>
+            <a href="cariocas.html">Cariocas</a>
+          </div>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Mais</a>
+            <div class="dropdown-content">
+              <a href="gols.html">Gols históricos</a>
+              <a href="jog_hist.html">Jogadores históricos</a>
+              <a href="jogadores.html">Elenco</a>
+            </div>
+          </li>
+    </ul>
+    <h3>Brasileiros</h3>
+    <p class="importante">O Flamengo ganhou 8 vezes o campeonato brasileiro em sua história:</p>
+    <p class="anos"><a href="brasileiros_anos/1980.html">1980</a>, <a href="brasileiros_anos/1982.html">1982</a>, <a href="brasileiros_anos/1983.html">1983</a>, <a href="brasileiros_anos/1987.html">1987</a>, <a href="brasileiros_anos/1992.html">1992</a>, <a href="brasileiros_anos/2009.html">2009</a>, <a href="brasileiros_anos/2019.html">2019</a>, <a href="brasileiros_anos/2020.html">2020</a></p>
+    <p>Clique em um dos anos acima para ler mais sobre</p>
 </body>
 </html>

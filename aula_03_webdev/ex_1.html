@@ -3,20 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Flamengo</title>
+    <style>
+        html, body {
+            height: 100%;
+            overflow-x: hidden; /* Evitar a barra de rolagem horizontal */
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Definindo a altura da página como 100% da altura da viewport */
+            background: linear-gradient(to bottom, rgb(150, 9, 9) 10%, black 90%); /* Gradiente de duas cores */
+            display: flex; /* Usando flexbox */
+            flex-direction: column; /* Direção da coluna */
+            justify-content: center; /* Centraliza o conteúdo verticalmente */
+            align-items: center; /* Centraliza o conteúdo horizontalmente */
+        }
+        h1 {
+            font-family: Verdana;
+            text-align: center;
+            font-size: 90px;
+            color: black;
+        }
+        h2 {
+            text-align: center;
+            font-size: 80px;
+            color: rgb(156, 10, 10);
+            margin-bottom: 30px;
+        }
+        h3 {
+            text-align: center;
+            font-size: 40px;
+        }
+        .link {
+            font-size: 25px;
+            color: red;
+        }
+        .link-container ul {
+            text-align: center;
+            list-style-type: none;
+        }
+        .container_escudo {
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Flamengo</h1>
-    <h2>1 mundial</h2>
-    <h3>3 libertadores</h3>
-    <h4>4 copa do brasil</h4>
-    <h5>8 brasileiros</h5>
-    <h6>37 cariocas</h6>
+    <h1>Clube de Regatas do Flamengo</h1>
+    <div class="container_escudo">
+        <img src="escudo_fla.png" alt="Escudo do Flamengo" width="400px" height="300px">
+    </div>
     <h2>Títulos</h2>
-    <menu>
-        <li><a href="brasileiros.html">Brasileiros</a></li>
-        <li><a href="copa_do_brasil.html">Copa do Brasil</a></li>
-        <li><a href="libertadores.html">Libertadores</a></li>
-    </menu>
+    <div class="link-container">
+        <ul>
+            <li><a class="link" href="mundial.html">Mundial</a></li>
+            <li><a class="link" href="libertadores.html">Libertadores</a></li>
+            <li><a class="link" href="brasileiros.html">Brasileiros</a></li>
+            <li><a class="link" href="copa_do_brasil.html">Copa do Brasil</a></li>
+            <li><a class="link" href="cariocas.html">Cariocas</a></li>
+        </ul>
+    </div>
 </body>
 </html>

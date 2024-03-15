@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elenco do Time</title>
+  <link rel="stylesheet" href="second.css">
+  <style>
+    /* Estilos para centralizar conteúdo */
+    .player-info {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    img {
+      max-width: 80vw; /* Largura máxima de 80% da largura da viewport */
+      max-height: 80vh; /* Altura máxima de 80% da altura da viewport */
+      width: auto;
+      height: auto;
+    }
+    button {
+      font-size: 2vw; /* Tamanho da fonte do botão em relação à largura da viewport */
+      padding: 1vw 2vw; /* Preenchimento do botão em relação à largura da viewport */
+    }
+  </style>
+</head>
+<body>
+    <ul class="estilo">
+        <li><a href="teste.html">Início</a></li>
+        <li><a href="historia.html">História</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Títulos</a>
+          <div class="dropdown-content">
+            <a href="mundial.html">Mundial</a>
+            <a href="libertadores.html">Libertadores</a>
+            <a href="brasileiros.html">Brasileiros</a>
+            <a href="copa_do_brasil.html">Copa do Brasil</a>
+            <a href="cariocas.html">Cariocas</a>
+          </div>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Mais</a>
+            <div class="dropdown-content">
+              <a href="gols.html">Gols históricos</a>
+              <a href="jog_hist.html">Jogadores históricos</a>
+              <a href="jogadores.html">Elenco</a>
+            </div>
+          </li>
+    </ul>
+
+
+    <div class="player-info">
+    <h2>Jogador 1</h2>
+    <img id="player-img" src="imagens/imagem_jogador_1.jpg" alt="Jogador 1">
+    <p>Informações sobre o jogador 1.</p>
+    <button onclick="previousPlayer()" id="previous-btn" style="display: none;">Anterior</button>
+    <button onclick="nextPlayer()" id="next-btn">Próximo</button>
+    </div>
+
+    <script>
+    const players = [
+        {
+        name: "Agustín Rossi",
+        image: "imagens/rossi.png",
+        info: "Posição: Goleiro"
+        },
+        {
+        name: "Matheus Cunha",
+        image: "imagens/mcunha.png",
+        info: "Posição: Goleiro"
+        },
+        {
+        name: "David Luiz",
+        image: "imagens/dluiz.png",
+        info: "Posição: Zagueiro"
+        },
+        {
+        name: "Léo Pereira",
+        image: "imagens/lpereira.png",
+        info: "Posição: Zagueiro"
+        },
+        {
+        name: "Léo Ortiz",
+        image: "imagens/lortiz.png",
+        info: "Posição: Zagueiro"
+        },
+        {
+        name: "Fabrício Bruno",
+        image: "imagens/fbruno.png",
+        info: "Posição: Zagueiro"
+        },
+        {
+        name: "Wesley",
+        image: "imagens/wesley.png",
+        info: "Posição: Lateral"
+        },
+        {
+        name: "Guillermo varela",
+        image: "imagens/varela.png",
+        info: "Posição: Lateral"
+        },
+        {
+        name: "Ayrton Lucas",
+        image: "imagens/alucas.png",
+        info: "Posição: Lateral"
+        },
+        {        
+        name: "Matías Viña",
+        image: "imagens/vina.png",
+        info: "Posição: Lateral"
+        },
+        {
+        name: "Allan",
+        image: "imagens/allan.png",
+        info: "Posição: Volante"
+        },
+        {
+        name: "Igor Jesus",
+        image: "imagens/ijesus.png",
+        info: "Posição: Volante"
+        },
+        {
+        name: "Erick Pulgar",
+        image: "imagens/pulgar.png",
+        info: "Posição: Volante"
+        },
+        {
+        name: "Gerson",
+        image: "imagens/gerson.png",
+        info: "Posição: Volante"
+        },
+        {
+        name: "De La Cruz",
+        image: "imagens/dlc.png",
+        info: "Posição: Meio campo"
+        },
+        {
+        name: "Victor Hugo",
+        image: "imagens/vh.png",
+        info: "Posição: Meio campo"
+        },
+        {
+        name: "Giorgian de Arrascaeta",
+        image: "imagens/arrascaeta.png",
+        info: "Posição: Meio campo"
+        },
+        {
+        name: "Matheus Gonçalves",
+        image: "imagens/goncalves.png",
+        info: "Posição: Meio campo"
+        },
+        {
+        name: "Everton Cebolinha",
+        image: "imagens/cebolinha.png",
+        info: "Posição: Ponta"
+        },
+        {
+        name: "Luiz Araújo",
+        image: "imagens/laraujo.png",
+        info: "Posição: Ponta"
+        },
+        {
+        name: "Bruno Henrique",
+        image: "imagens/bh.png",
+        info: "Posição: Ponta"
+        },
+        {
+        name: "Gabriel Barbosa",
+        image: "imagens/gabi.png",
+        info: "Posição: Centro-avante"
+        },
+        {
+        name: "Pedro",
+        image: "imagens/pedro.png",
+        info: "Posição: Centro-avante"
+        }
+        // Adicione mais jogadores conforme necessário
+    ];
+
+    let currentIndex = 0;
+
+    function showPlayer(index) {
+        const player = players[index];
+        document.getElementById('player-img').src = player.image;
+        document.querySelector('.player-info h2').textContent = player.name;
+        document.querySelector('.player-info p').textContent = player.info;
+
+        // Ocultar ou exibir botões de acordo com o índice atual
+        document.getElementById('previous-btn').style.display = index === 0 ? 'none' : 'inline-block';
+        document.getElementById('next-btn').style.display = index === players.length - 1 ? 'none' : 'inline-block';
+    }
+
+    function nextPlayer() {
+        currentIndex = Math.min(currentIndex + 1, players.length - 1);
+        showPlayer(currentIndex);
+    }
+
+    function previousPlayer() {
+        currentIndex = Math.max(currentIndex - 1, 0);
+        showPlayer(currentIndex);
+    }
+
+    // Exibir o primeiro jogador ao carregar a página
+    showPlayer(currentIndex);
+    </script>
+
+</body>
+</html>

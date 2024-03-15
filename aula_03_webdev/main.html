@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clube de Regatas do Flamengo</title>
+    <style>
+        /* Estilo básico para a barra de tarefas */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* Definindo a altura da página como 100% da altura da viewport */
+            background: linear-gradient(to bottom, rgb(150, 9, 9) 10%, black 90%); /* Gradiente de duas cores */
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+            font-size: 25px;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 28px 32px;
+            text-decoration: none;
+        }
+
+        /* Estilo para as opções que serão mostradas */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #111;
+        }
+
+        /* Mostra as opções quando passa o mouse */
+        li:hover .dropdown-content {
+            display: block;
+        }
+        h3 {
+            text-align: center;
+            font-size: 115px;
+        }
+        img {
+            margin-left: auto; /* Define a margem esquerda como automática */
+            margin-right: auto; /* Define a margem direita como automática */
+            display: block; /* Faz a imagem comportar-se como um bloco */
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="estilo">
+        <li><a href="teste.html">Início</a></li>
+        <li><a href="historia.html">História</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Títulos</a>
+          <div class="dropdown-content">
+            <a href="mundial.html">Mundial</a>
+            <a href="libertadores.html">Libertadores</a>
+            <a href="brasileiros.html">Brasileiros</a>
+            <a href="copa_do_brasil.html">Copa do Brasil</a>
+            <a href="cariocas.html">Cariocas</a>
+          </div>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Mais</a>
+            <div class="dropdown-content">
+              <a href="gols.html">Gols históricos</a>
+              <a href="jog_hist.html">Jogadores históricos</a>
+              <a href="jogadores.html">Elenco</a>
+            </div>
+          </li>
+    </ul>
+
+    <h3>Clube de Regatas do Flamengo</h3>
+    <img src="imagens/escudo_fla.png" alt="escudo" width="480" height="320">
+
+</body>
+</html>
