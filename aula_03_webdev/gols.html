@@ -5,10 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elenco</title>
     <link rel="stylesheet" href="second.css">
+    <style>
+      .video-container {
+          text-align: center;
+      }
+
+      video {
+          display: inline-block;
+          vertical-align: middle;
+      }
+    </style>
 </head>
 <body>
     <ul class="estilo">
-        <li><a href="teste.html">Início</a></li>
+        <li><a href="main.html">Início</a></li>
         <li><a href="historia.html">História</a></li>
         <li class="dropdown">
           <a href="javascript:void(0)" class="dropbtn">Títulos</a>
@@ -29,5 +39,12 @@
             </div>
           </li>
     </ul>
+    <div class="video-container">
+      <h1>Segundo gol do gabigol na final da libertadores de 2019</h1>
+      <video width="640" height="360" controls>
+          <source src="videos/gabigol2_liberta_2019.mp4" type="video/mp4">
+          Seu navegador não suporta o elemento de vídeo.
+      </video>
+    </div>
 </body>
 </html>
